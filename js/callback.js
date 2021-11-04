@@ -53,4 +53,69 @@ function onPageLoader(pageData) {
     console.log(pageData)
 }
 
-pageLoader(onPageLoader)
+// pageLoader(onPageLoader)
+
+////////////////////////// Prromis
+
+var Word = true;
+promise1 = new Promise(function(resolve, reject) {
+    if (Word) {
+        resolve("The man likes to keep his word")
+    } else {
+        reject("The man doesnt want to keep his word")
+    }
+
+});
+console.log(promise1)
+
+// promise2 = new Promise(function(resolve, reject) {
+//     setTimeout(function() {
+//         resolve({
+//             message: "The man like",
+//             code: "qwecasd"
+//         })
+//     }, 10 * 1000)
+// })
+
+// console.log(promise2)
+
+
+// 'use strict'
+
+// let promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         reject('result123');
+//     }, 1000)
+// })
+
+// promise 
+//     .then(
+//         result => {
+//             console.log("Fulfilled: " + result )
+//         },
+//         error => {
+//             console.log("Rejected123213: " + error)
+//         }
+//     );
+
+
+class Triple {
+    static triple(n) {
+        this.n = 1
+        if ( n === undefined) {
+            n = 20
+        }
+        return n * 5
+    }
+}
+
+
+class BiggerTriple extends Triple {
+    static triple(n) {
+        this.triple(12)
+        return super.triple(n) * super.triple(n)
+    }
+}
+
+console.log(Triple.triple())
+console.log(Triple.triple(6))
