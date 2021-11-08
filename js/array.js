@@ -18,3 +18,16 @@ console.log(copy)
 
 const rev = a.reverse()
 console.log(rev)
+
+
+let user = [
+    {id: 1, name: "Ahmad"},
+    {id: 2, name: 'Aina'},
+    {id: 3, name: 'Gulya'}
+];
+
+let user = users.find( item => item.name == 'Ahmad')
+
+console.log(user)
+
+
