@@ -30,3 +30,43 @@
 
 // coutdown()
 // setInterval(coutdown, 1000)
+
+
+// function showFullName() {
+//     alert( user.firstName + " " + this.lastName)
+// }
+
+// var user = {
+//     firstName: 'Vasiliy',
+//     lastName: 'Petrov'
+// }
+
+// // showFullName.call(user)
+// function f(o){}
+
+// console.log(f.call(o))
+
+
+
+// function names(o, a) {
+//     if ( a == undefined)
+//     a = []
+//      for ( var property in o) a.push(property)
+//     return a
+// }
+// var a = names(o)
+// console.log(names(p, a))
+
+
+let user = {
+    name: 'Jon',
+    age: 30,
+    sayHi() {
+        alert(user.name)
+    }
+}
+
+let admin = user
+user = null
+
+user.sayHi('hihih')
