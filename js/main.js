@@ -123,21 +123,59 @@
 
 
 
-let ladder = {
-    step: 0,
-    up() {
-        this.step++;
-        return this
-    },
-    down() {
-        this.step--;
-        return this
-    },
-    showStep(){
-        alert(this.step);
-        return this
-    }
-};
+// let ladder = {
+//     step: 0,
+//     up() {
+//         this.step++;
+//         return this
+//     },
+//     down() {
+//         this.step--;
+//         return this
+//     },
+//     showStep(){
+//         alert(this.step);
+//         return this
+//     }
+// };
 
 
-ladder.up().up().down().showStep()
+// ladder.up().up().down().showStep()
+
+
+
+// let calculatr = {
+//     read() {
+//         this.a = +prompt('a?', 0);
+//         this.b = +prompt('b', 0)
+//     },
+//     sum() {
+//         return this.a + this.b
+//     },
+//     mmul() {
+//         return this.a * this.b
+//     }
+// }
+
+// calculatr.read()
+// console.log(calculatr.sum())
+// console.log(calculatr.mmul())
+
+
+function User(name) {
+    this.name = name,
+    this.isAdmin = false
+}
+
+let user = new User('Вася')
+let admin = new User('Катя')
+console.log(user.name)
+console.log(admin.name)
+
+function BigUser() {
+    this.name = "Alex";
+
+    return { name: "Godzilla"}
+}
+
+console.log( new BigUser().name)

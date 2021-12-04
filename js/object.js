@@ -120,30 +120,30 @@
 
 // (null, alert)('Zomg what is this')
 
-function makeArray(arg1, arg2) {
-    return [this, arg1, arg2]
-}
+// function makeArray(arg1, arg2) {
+//     return [this, arg1, arg2]
+// }
 
-console.log(makeArray('one', 'two'))
-var car = { year: 2008, model: 'Dodge Bailout'}
-console.log(makeArray.apply(car, ['one', 'for']))
-// console.log( typeof window.methodThatDoesntExist)
+// console.log(makeArray('one', 'two'))
+// var car = { year: 2008, model: 'Dodge Bailout'}
+// console.log(makeArray.apply(car, ['one', 'for']))
+// // console.log( typeof window.methodThatDoesntExist)
 
-var arrayMaker = {
-    someProperty: 'какие-то значения',
-    make: makeArray
-}
+// var arrayMaker = {
+//     someProperty: 'какие-то значения',
+//     make: makeArray
+// }
 
-console.log(arrayMaker.make('one','three'))
+// console.log(arrayMaker.make('one','three'))
 
-console.log(arrayMaker['make']('one','three'))
+// console.log(arrayMaker['make']('one','three'))
 
-function buttonClicked() {
-    var text = (this === window) ? 'window' : this.id
-    alert( text )
-}
-var button1 = document.getElementsByClassName('btn');
-var button2 = document.getElementById('btn2');
+// function buttonClicked() {
+//     var text = (this === window) ? 'window' : this.id
+//     alert( text )
+// }
+// var button1 = document.getElementsByClassName('btn');
+// var button2 = document.getElementById('btn2');
 
-button1.onclick = buttonClicked;
-button2.onclick = function(){ buttonClicked(); };
+// button1.onclick = buttonClicked;
+// button2.onclick = function(){ buttonClicked(); };
