@@ -58,15 +58,86 @@
 // console.log(names(p, a))
 
 
-let user = {
-    name: 'Jon',
-    age: 30,
-    sayHi() {
-        alert(user.name)
+// let user = {
+//     name: 'Jon',
+//     age: 30,
+//     sayHi() {
+//         alert(user.name)
+//     }
+// }
+
+// let admin = user
+// user = null
+
+// user.sayHi('hihih')
+
+
+
+// function sayHi() {
+//     alert(this.name)
+// }
+
+
+
+// let user = { name: 'Jon'}
+// let admin = { name: 'Admin'}
+
+// function sayhi() {
+//     alert(this.name)
+// }
+
+// user = sayhi
+// admin.t = sayhi
+
+// admin.t()
+
+
+
+// let user = {
+//     name: 'Jon',
+//     hi() { alert(this.name)},
+//     bye() {alert('bye')} 
+// }
+
+// user.bye()
+
+// (user.name == 'Jon' ? user.hi : user.bye)
+
+
+
+// let user = {
+//     name: 'Jon',
+//     go() {alert(this.name)}
+// }
+// user.go()
+
+
+// let obj, method
+
+// obj = {
+//     go(){ alert(this)}
+// }
+// obj.go();
+// (obj.go)()
+// console.log(typeof method)
+
+
+
+let ladder = {
+    step: 0,
+    up() {
+        this.step++;
+        return this
+    },
+    down() {
+        this.step--;
+        return this
+    },
+    showStep(){
+        alert(this.step);
+        return this
     }
-}
+};
 
-let admin = user
-user = null
 
-user.sayHi('hihih')
+ladder.up().up().down().showStep()
