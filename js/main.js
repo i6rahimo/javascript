@@ -3,6 +3,8 @@
 // const mins    = document.querySelector('.mins p')
 // const seconds = document.querySelector('.seconds p')
 
+// const { prototype } = require("npm/lib/npm");
+
 // const newYears = '1 Jan 2022';
 // function coutdown() {
 //     const newYearsDate = new Date(newYears);
@@ -296,37 +298,75 @@
 
 
 
-const namelist = new Array(4294967269)
+// const namelist = new Array(4294967269)
 
-console.log(namelist.length);
+// console.log(namelist.length);
 
-let namelistB = []
-namelistB.length = Math.pow(2, 32) -1
-console.log(namelistB);
+// let namelistB = []
+// namelistB.length = Math.pow(2, 32) -1
+// console.log(namelistB);
 
-let arr = [1, 2, 3]
-printEntries(arr)
+// let arr = [1, 2, 3]
+// printEntries(arr)
 
-arr.length = 5
-printEntries(arr)
+// arr.length = 5
+// printEntries(arr)
 
-function printEntries(arr) {
-    let goNext = true
-    let entries = arr.entries()
-    while (goNext) {
-        let result = entries.next() 
-        if(result.done !== true) {
-            console.log(result.value[1]);
-            goNext = true
-        }else 
-        goNext = false
+// function printEntries(arr) {
+//     let goNext = true
+//     let entries = arr.entries()
+//     while (goNext) {
+//         let result = entries.next() 
+//         if(result.done !== true) {
+//             console.log(result.value[1]);
+//             goNext = true
+//         }else 
+//         goNext = false
+//     }
+//     console.log('=== printed ===');
+// }
+
+// let obj = { foo: 'bar', baz: 42}
+// console.log(Object.entries(obj));
+
+// let myObj = Object.create({}, { getFoo: {value: function() {return this.foo}}})
+// myObj.foo = 'bar'
+// console.log(Object.entries(myObj));
+
+
+
+
+// let sayHi = function func(who) {
+//     console.log(`Hello ${who}`);
+// }
+
+// sayHi('qwe')
+
+
+// let sayHi = new Function('alert("hello")')
+// sayHi()
+
+
+// let user = {
+//     name: 'Jon'
+// }
+
+
+// Object.defineProperties(user, 'name', {
+//     writable: false
+// })
+
+// user.name = 'pere'
+
+
+let user = {
+    name: "John",
+    surname: "Smith",
+
+    get fullName() {
+        return `${this.name} ${this.name}`
     }
-    console.log('=== printed ===');
 }
 
-let obj = { foo: 'bar', baz: 42}
-console.log(Object.entries(obj));
+console.log(user.fullName);
 
-let myObj = Object.create({}, { getFoo: {value: function() {return this.foo}}})
-myObj.foo = 'bar'
-console.log(Object.entries(myObj));
