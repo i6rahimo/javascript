@@ -359,14 +359,82 @@
 // user.name = 'pere'
 
 
-let user = {
-    name: "John",
-    surname: "Smith",
+// let user = {
+//     name: "John",
+//     surname: "Smith",
 
-    get fullName() {
-        return `${this.name} ${this.name}`
+//     get fullName() {
+//         return `${this.name} ${this.name}`
+//     }
+// }
+
+// console.log(user.fullName);
+
+
+// let user = {
+//     get fullName() {
+//         return `...`
+//     }
+// }
+// console.log( user.fullName = 'Test');
+
+
+const course = { name: 'JS: React', slug: 'js-react'}
+
+for ( const prop in course ) {
+    console.log(`${prop} = ${course[prop]}`);
+    
+}
+
+const keys = Object.keys(course)
+console.log(keys);
+
+for ( const key of keys ) {
+    console.log( course[key]);
+    
+}
+
+const values = Object.values(course)
+for ( const value of values ) {
+    console.log(value);
+    
+}
+
+
+const entries = Object.entries(course)
+
+for ( const entrie of entries ) {
+    console.log(entrie);
+    
+}
+
+const one = Object.create(null)
+
+const two = {
+    z: 3,
+    __proto__: one
+}
+
+console.log(one.toString);
+
+
+const ObjectA = { x: 10}
+
+const ObjectC = Object.create(ObjectA)
+console.log(ObjectC.x);
+
+
+
+let letter = {
+    getNumbebr() {
+        return this.x
     }
 }
 
-console.log(user.fullName);
+
+const a = { x: 12, __proto__: letter}
+
+
+console.log(a.getNumbebr());
+
 
