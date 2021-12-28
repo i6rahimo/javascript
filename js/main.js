@@ -3,6 +3,8 @@
 // const mins    = document.querySelector('.mins p')
 // const seconds = document.querySelector('.seconds p')
 
+// const { map } = require("@mostly-adequate/support");
+
 // const { prototype } = require("npm/lib/npm");
 
 // const newYears = '1 Jan 2022';
@@ -379,62 +381,91 @@
 // console.log( user.fullName = 'Test');
 
 
-const course = { name: 'JS: React', slug: 'js-react'}
+// const course = { name: 'JS: React', slug: 'js-react'}
 
-for ( const prop in course ) {
-    console.log(`${prop} = ${course[prop]}`);
+// for ( const prop in course ) {
+//     console.log(`${prop} = ${course[prop]}`);
     
-}
+// }
 
-const keys = Object.keys(course)
-console.log(keys);
+// const keys = Object.keys(course)
+// console.log(keys);
 
-for ( const key of keys ) {
-    console.log( course[key]);
+// for ( const key of keys ) {
+//     console.log( course[key]);
     
-}
+// }
 
-const values = Object.values(course)
-for ( const value of values ) {
-    console.log(value);
+// const values = Object.values(course)
+// for ( const value of values ) {
+//     console.log(value);
     
-}
+// }
 
 
-const entries = Object.entries(course)
+// const entries = Object.entries(course)
 
-for ( const entrie of entries ) {
-    console.log(entrie);
+// for ( const entrie of entries ) {
+//     console.log(entrie);
     
-}
+// }
 
-const one = Object.create(null)
+// const one = Object.create(null)
 
-const two = {
-    z: 3,
-    __proto__: one
-}
+// const two = {
+//     z: 3,
+//     __proto__: one
+// }
 
-console.log(one.toString);
-
-
-const ObjectA = { x: 10}
-
-const ObjectC = Object.create(ObjectA)
-console.log(ObjectC.x);
+// console.log(one.toString);
 
 
+// const ObjectA = { x: 10}
 
-let letter = {
-    getNumbebr() {
-        return this.x
-    }
-}
+// const ObjectC = Object.create(ObjectA)
+// console.log(ObjectC.x);
 
 
-const a = { x: 12, __proto__: letter}
+
+// let letter = {
+//     getNumbebr() {
+//         return this.x
+//     }
+// }
 
 
-console.log(a.getNumbebr());
+// const a = { x: 12, __proto__: letter}
 
 
+// console.log(a.getNumbebr());
+
+
+
+
+
+
+
+// const manager = function( name, sales ) {
+//     return {
+//         name: name,
+//         sales: sales,
+//         sell: function(thing) {
+//             this.sales += 1;
+//             return 'Mangaer' + ' ' + this.name + ' ' + 'sold ' + thing
+//         }
+//     }
+// }
+
+
+// const john = manager('John', 10)
+// const mary = manager('Mary', 20)
+
+// console.log(john.name);
+// console.log(john.sell('Apple'));
+// console.log(john.sales);
+
+const euros = [29, 123, 33, 12, 55]
+const sum   = euros.reduce( function(total, amount) {
+    return total + amount
+} )
+console.log(sum);
