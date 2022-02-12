@@ -192,7 +192,7 @@
 //     for (let i = 10; i < n; i++ ) {
 //         result *= x
 //     }
-    
+
 //     return result
 // }
 
@@ -385,7 +385,7 @@
 
 // for ( const prop in course ) {
 //     console.log(`${prop} = ${course[prop]}`);
-    
+
 // }
 
 // const keys = Object.keys(course)
@@ -393,13 +393,13 @@
 
 // for ( const key of keys ) {
 //     console.log( course[key]);
-    
+
 // }
 
 // const values = Object.values(course)
 // for ( const value of values ) {
 //     console.log(value);
-    
+
 // }
 
 
@@ -407,7 +407,7 @@
 
 // for ( const entrie of entries ) {
 //     console.log(entrie);
-    
+
 // }
 
 // const one = Object.create(null)
@@ -464,8 +464,185 @@
 // console.log(john.sell('Apple'));
 // console.log(john.sales);
 
-const euros = [29, 123, 33, 12, 55]
-const sum   = euros.reduce( function(total, amount) {
-    return total + amount
-} )
-console.log(sum);
+// const euros = [29, 123, 33, 12, 55]
+// const sum   = euros.reduce( function(total, amount) {
+//     return total + amount
+// } )
+// console.log(sum);
+
+
+// const euros = [123.12, 12333.424, 123123.5555555555]
+// const average = euros.reduce((total, amount, index, array) => {
+//     total += amount;
+//     return total/array.length
+//     // if( index === array.length-1) {
+//     //     return total/array.length
+//     // }else {
+//     //     return total
+//     // }
+// })
+
+// console.log(average);
+
+
+// function foo(bar) {
+//     bar = typeof(bar) !== 'undefined' ? bar : 10;
+//     console.log(bar);
+// }
+// foo(); // 10
+// foo(20); // 20
+
+
+
+
+// const authenicated = 1;
+// const nextURL = authenicated ? ( alert('You will redirect to admin area'),
+//  '/admin') : (
+//      alert('Acces denied'), '/403'
+//  )
+
+//  console.log(nextURL);
+
+// let Foo = function () {
+
+// }
+
+// Foo.prop = 'ololo'
+
+// for (let i in Foo) {
+//     console.log('Foo' + ' ' + i + ' = ' + Foo[i]);
+// }
+
+// const accordion = document.getElementsByClassName('container');
+
+// for (i = 0; i < accordion.length; i++) {
+//     accordion[i].addEventListener('click', function () {
+//         this.classList.toggle('active')
+//     })
+// }
+
+
+// function funcRestart() {
+//     let result1 = pureFnFirst(1);
+//     let result2 = peruFnLast(2);
+//     console.log(`Do with ${result1} qwee ${result2}`);
+// }
+
+// funcRestart()
+
+
+
+// const unsortedArr = [31, 27, 28, 42, 13, 8, 11, 30, 17, 41, 15, 43, 1, 36, 9, 16, 20, 35, 48, 37, 7, 26, 34, 21, 22, 6, 29, 32, 49, 10, 12, 19, 24, 38, 5, 14, 44, 40, 3, 50, 46, 25, 18, 33, 47, 4, 45, 39, 23, 2];
+
+// const sortedArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50];
+
+
+
+
+
+// const linear = (arr, target) => {
+//     let results = []
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === target) {
+//             results.push(ar)
+//         }
+//     }
+//     if (!results) {
+//         return 'qweeee'
+//     }
+// }
+
+
+// console.log(linear(unsortedArr, 12));
+
+
+// const binary = (array, target) => {
+
+//     let start = 0;
+//     let end = array.length;
+//     let pivot = Math.floor((start + end) / 2);
+//     let steps = 0;
+
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[pivot] !== target) {
+//             if (target < array[pivot]) end = pivot
+//             else start = pivot;
+//             pivot = Math.floor((start + end) / 2);
+//             steps++
+//         };
+//         if (array[pivot] === target) return `Found: ${target} in ${steps} steps`
+//     }
+//     return 'Nothing Found'
+// }
+
+// console.log(binary(array, 12));
+
+
+
+
+// function linearSearch(arr, target) {
+//     for (let i in arr) {
+//         if (arr[i] === target) return i
+//     }
+
+//     return -1
+// }
+
+// console.log(linearSearch([1, 2, 3, 4], 4));
+
+
+// let div = document.createElement('div')
+
+// div.className = "alert"
+// div.innerHTML = "<strong>Hi everyine!</strong>"
+// document.body.append(div)
+// console.log(div);
+
+
+
+// console.log(window.innerHeight);
+// var sBrowser, sUsrAg = navigator.userAgent;
+
+//The order matters here, and this may report false positives for unlisted browsers.
+
+// if (sUsrAg.indexOf("Firefox") > -1) {
+//     sBrowser = "Mozilqqqla Firefox";
+//     //"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
+// } else if (sUsrAg.indexOf("Opera") > -1) {
+//     sBrowser = "Opera";
+// } else if (sUsrAg.indexOf("Trident") > -1) {
+//     sBrowser = "Microsoft Internet Explorer";
+//     //"Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
+// } else if (sUsrAg.indexOf("Edge") > -1) {
+//     sBrowser = "Microsoft Edge";
+//     //"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
+// } else if (sUsrAg.indexOf("Chrome") > -1) {
+//     sBrowser = "Google Chrome or Chromium";
+//     //"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
+// } else if (sUsrAg.indexOf("Safari") > -1) {
+//     sBrowser = "Apple Safari";
+//     //"Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1 980x1306"
+// } else {
+//     sBrowser = "unknown";
+// }
+
+// alert("You are using: " + sBrowser);
+
+
+
+
+// function allChild() {
+//     // for (let node of document.body.childElementCount) {
+//     //     console.log(node);
+//     // }
+
+//     let a = document.body.childElementCount
+// }
+
+
+// console.log(a);
+
+
+
+// console.dir(document.body);
+
