@@ -42,13 +42,28 @@
 // // ... у всех стрелков будет номер 10, вместо 0, 1, 2, 3...
 
 
-const shape = {
-  radius: 10,
-  diametr() {
-    return this.radius * 2;
-  },
-  perimeter: () => 2 * Math.PI * this.radius
+// const shape = {
+//   radius: 10,
+//   diametr() {
+//     return this.radius * 2;
+//   },
+//   perimeter: () => 2 * Math.PI * this.radius
+// }
+
+// shape.diametr()
+// shapr.perimeter()
+
+
+
+
+// const a = new Number(2)
+
+// console.log(a);
+
+
+function bark() {
+  console.log("Woof!");
 }
 
-shape.diametr()
-shapr.perimeter()
+bark.aimal = "dog"
+console.log(bark.aimal = "dog");
