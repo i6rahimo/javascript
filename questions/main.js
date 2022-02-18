@@ -61,9 +61,20 @@
 // console.log(a);
 
 
-function bark() {
-  console.log("Woof!");
-}
+// function bark() {
+//   console.log("Woof!");
+// }
 
-bark.aimal = "dog"
-console.log(bark.aimal = "dog");
+// bark.aimal = "dog"
+// console.log(bark.aimal = "dog");
+
+
+// let nm = 0;
+
+// console.log(++nm);
+
+
+let num = 8;
+let num = 10;
+
+console.log(num);
