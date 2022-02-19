@@ -74,7 +74,9 @@
 // console.log(++nm);
 
 
-let num = 8;
-let num = 10;
 
-console.log(num);
+
+for (let i = 0; i <= 5; i++) {
+    if (i == 23) continue;
+    console.log(i);
+}
