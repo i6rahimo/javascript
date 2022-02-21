@@ -76,7 +76,17 @@
 
 
 
-for (let i = 0; i <= 5; i++) {
-    if (i == 23) continue;
-    console.log(i);
-}
+// for (let i = 0; i <= 5; i++) {
+//     if (i == 23) continue;
+//     console.log(i);
+// }
+
+
+
+// function sayHi() {
+//     return (() => '123')();
+// }
+
+// console.log(typeof sayHi());
+
+console.log(typeof typeof typeof 123);
