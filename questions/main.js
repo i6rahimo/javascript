@@ -89,4 +89,21 @@
 
 // console.log(typeof sayHi());
 
-console.log(typeof typeof typeof 123);
+// console.log(typeof typeof typeof 123);
+
+
+// console.log(...'Lidiya', ...'qwee');
+
+
+function* generate() {
+    yield 1;
+    yield 2;
+    return 3;
+}
+console.log(generate);
+let generator = generate()
+
+let onew = generator.next()
+
+
+console.log(JSON.stringify(onew));
