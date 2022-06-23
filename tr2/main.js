@@ -122,13 +122,35 @@
 
 
 
-let user = {
-  name: "Ivan",
-  age: 30
+// let user = {
+//   name: "Ivan",
+//   age: 30
+// }
+
+// let clone = Object.assign([1], user)
+
+// console.log(clone);
+
+
+function isEvenirOdd(num) {
+
+  if(num % 3 == 0) {
+    console.log(`${num} is a Even number`);
+  }
+  else {
+    console.log(`${num} is a Odd number`);
+  }
 }
 
-let clone = Object.assign([1], user)
+isEvenirOdd(22)
 
-console.log(clone);
+function isEvenirOdd2(num) {
+  if(num & 1) {
+    console.log(`${num} is a Even number `);
+  }
+  else {
+    console.log('qwe');
+  }
+}
 
-
+isEvenirOdd2(1)
