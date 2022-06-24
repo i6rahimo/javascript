@@ -131,26 +131,121 @@
 
 // console.log(clone);
 
+// ===================================== IF
+// function isEvenirOdd(num) {
 
-function isEvenirOdd(num) {
+//   if(num % 3 == 0) {
+//     console.log(`${num} is a Even number`);
+//   }
+//   else {
+//     console.log(`${num} is a Odd number`);
+//   }
+// }
 
-  if(num % 3 == 0) {
-    console.log(`${num} is a Even number`);
+// isEvenirOdd(22)
+
+// function isEvenirOdd2(num) {
+//   if(num & 1) {
+//     console.log(`${num} is a Even number `);
+//   }
+//   else {
+//     console.log('qwe');
+//   }
+// }
+
+// isEvenirOdd2(1)
+
+function isValidNumber(num) {
+  if(isNaN(num)) {
+    console.log(`${num} is not a number`);
+  } 
+  else {
+    console.log(`${num} is a valid number`);
+  }
+}
+isValidNumber('')
+
+
+function findLargest(num1, num2) {
+  if(num1 > num2) {
+    console.log(`${num1} is the largest number then ${num2}`);
+  }
+  else if (num2 > num2) {
+    console.log(`${num2} the largest number then ${num1}`);
   }
   else {
-    console.log(`${num} is a Odd number`);
+    console.log(`${num1} is equal to ${num2}`);
   }
 }
 
-isEvenirOdd(22)
+findLargest(22, 12)
 
-function isEvenirOdd2(num) {
-  if(num & 1) {
-    console.log(`${num} is a Even number `);
+function findLargestThreeNUmber(num1, num2, num3) {
+  if(num1 > num2 && num1 > num3) {
+    console.log(`${num1} is the largest number`);
+  }
+  else if (num2 > num3) {
+    console.log(`${num2} is the largest number`);
   }
   else {
-    console.log('qwe');
+    console.log(`${num3} is the largest number`);
   }
 }
 
-isEvenirOdd2(1)
+findLargestThreeNUmber(21, 33, 123)
+
+
+function findTriangleType(side1, side2, side3) {
+  if((side1 == side2) && (side1 == side3)) {
+    console.log('Equalater triangle');
+  }
+  else if ((side1 == side2) || (side2 == side3)) {
+    console.log('Isosceles triangle');
+  }
+  else {
+    console.log('Scalene triangle');
+  }
+}
+findTriangleType(12, 12, 12)
+
+
+function checkInRange(num, start, end) {
+  if(num >= start && num <= end) {
+    console.log(`${num} is between the range ${start} and ${end}`);
+  }
+  else {
+    console.log(`${num} is outside the range ${start} and ${end}`);
+  }
+}
+
+checkInRange(15, 15 , 14)
+
+
+function evalNumbers(num1, num2, op) {
+  if(op == 'add') {
+    console.log(`Sum of ${num1} and ${num2} is ${num1 + num2}`);
+  }
+  else if (op == 'substract') {
+    console.log(`Difference of ${num1} and ${num2} is ${num1 - num2}`);
+  }
+  else if (op == 'multiply') {
+    console.log(`Product of ${num1} and ${num2} is ${num1 * num2}`);
+  }
+  else if (op == 'divide') {
+    console.log(`Division of ${num1} and ${num2} is ${num1 / num2}`);
+  }
+  else if(op == 'modulus') {
+    console.log(`Modulus of ${num1} and ${num2} is ${num1 % num2}`);
+  }
+  else {
+    console.log(`${op} is an invalid operation`);
+  }
+}
+
+
+evalNumbers(15, 10, 'add')
+evalNumbers(15, 10, 'divide')
+evalNumbers(15, 10, 'modulus')
+
+
+
