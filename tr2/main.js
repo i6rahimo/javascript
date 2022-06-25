@@ -249,3 +249,48 @@ evalNumbers(15, 10, 'modulus')
 
 
 
+function checkLeapYear(year) {
+  if((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+    console.log(`Year ${year} is a leap year`);
+  }
+  else {
+    console.log(`Year ${year} is not a leap year`);
+  }
+}
+
+checkLeapYear(2011)
+
+
+function isLeapYear(year) {
+  return (((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)))
+}
+
+function findDaysInMonth(month, year) {
+  if(month < 1 || month > 12) {
+    console.log(`Invalid Month of value ${month}`);
+    return;
+  }
+  if(month == 2) {
+    if(isLeapYear(year)) {
+      console.log(`The Month has 29 days`);
+    }
+    else {
+      console.log(`The Month has 28 days`);
+    }
+  }
+  else if(month == 4 || month == 6 || month == 9 || month == 11) {
+    console.log(`The Month has 30 days`);
+  }
+  else {
+    console.log(`The Month hs 31 days`);
+  }
+}
+
+findDaysInMonth(0, 2012)
+
+
+console.log(
+  [1, 4, 3, 0, 4, 5, 4]
+  .filter(element => !(element % 2))
+  .reduceRight((accumulator, element) => accumulator + Math.sqrt(element), 0)
+);
