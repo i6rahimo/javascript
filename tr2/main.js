@@ -294,3 +294,22 @@ console.log(
   .filter(element => !(element % 2))
   .reduceRight((accumulator, element) => accumulator + Math.sqrt(element), 0)
 );
+
+const number = [12, 6, 8, 14, 4]
+console.log(number.filter(element => !(element % 2)));
+
+
+
+let arr = ['t', 'e', 's', 'q', '']
+console.log(arr.slice(1,5));
+
+
+
+
+
+
+const arrayName = ["Bilbo", "Sahsa", "Nikita"]
+
+const arrAllName = arrayName.forEach((item, index, array) => {
+  console.log(`${item} has postion ${++index} in ${array}`);
+})
