@@ -313,3 +313,20 @@ const arrayName = ["Bilbo", "Sahsa", "Nikita"]
 const arrAllName = arrayName.forEach((item, index, array) => {
   console.log(`${item} has postion ${++index} in ${array}`);
 })
+
+
+console.log(arrayName.includes("nikita"));
+
+
+
+
+
+
+const ages = [4, 12, 16, 20]
+
+function checkAge(age) {
+  return age < document.getElementById("ageToCheck").value;
+}
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.find(checkAge)
+}
