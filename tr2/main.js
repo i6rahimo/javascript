@@ -330,3 +330,49 @@ function checkAge(age) {
 function myFunction() {
   document.getElementById("demo").innerHTML = ages.find(checkAge)
 }
+
+
+const cities = [
+    {name: 'Moscow', population: 12506468},
+    {name: 'Saint Petersburg', population: 5351935},
+    {name: 'Novosibirsk', population: 1612833},
+    {name: 'Kaliningrad', population: 482443},
+    {name: 'Kaluga', population: 336726}
+];
+
+const millionPlusCities = [];
+
+for(var i = 0; i < cities.length; i++) {
+  if(cities[i].population > 1000000) {
+    millionPlusCities.push(cities[i])
+  }
+}
+
+console.log(millionPlusCities);
+
+
+
+const millionPlusCitiesTwo = cities.filter( e => e.population > 1000000)
+console.log(millionPlusCitiesTwo);
+
+cities.filter(e => e.population < 1000000)
+  .sort((a,b) => (b.population - a.population))
+  .map(e => console.log((e.name + ':' + e.population)));
+
+
+function isInRange(value) {
+  if(typeof value !== 'string') {
+    return true;
+  }
+  return value >= this.lower && value <= this.upper
+}
+
+const data = ["30",  'JavaScript filter', undefined, 'example'];
+
+const range = {lower: 1, upper: 10};
+
+const numberInRange = data.filter(isInRange, range)
+
+console.log(numberInRange);
+
+
