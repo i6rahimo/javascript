@@ -433,24 +433,101 @@
 // }
 
 
-const user = {
-  name: 'Jhon',
-  surname: 'Smith',
+// const user = {
+//   name: 'Jhon',
+//   surname: 'Smith',
+// }
+
+// user.name = 'Pete';
+
+// delete user.name;
+// console.log(user);
+
+// let salaries = {
+//   Jhon: 100,
+//   Ann: 160,
+//   Pete: 130,
+// };
+
+// let sum = 0;
+// for(let arr in salaries) sum += salaries[arr];
+// // console.log(sum);
+
+
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: 'My menu'
+// };
+
+// const multiplyNumeric = (obj) => {
+//   for(let arr in obj) {
+//     if(typeof obj[arr] === 'number') obj[arr] *= 2;
+//     else console.log('qwe');
+//   }
+//   console.log(obj);
+// } 
+// multipl
+
+function pow(x, n) {
+    return (n == 1) ? x : (x * pow(x, n - 1)); 
 }
 
-user.name = 'Pete';
+console.log(pow(2, 5));
 
-delete user.name;
-console.log(user);
 
-let salaries = {
-  Jhon: 100,
-  Ann: 160,
-  Pete: 130,
+let company = {
+  sales: [{
+    name: 'Jhon',
+    salary: 1000
+  }, {
+    name: 'Alice',
+    salary: 600
+  }
+],
+  development: {
+    sites: [{
+      name: 'Peter',
+      salary: 2000
+    }, {
+      name: 'Alex',
+      salary: 1800
+    }],
+    internals: [{
+      name: 'Jack',
+      salary: 1300
+    }]
+  }
 };
 
-for(let arr in salaries) {
-  let sum = '';
-  sum += salaries[arr]
-  console.log(sum);
+
+function sumSalaries(departament) {
+  if(Array.isArray(departament)) {
+    return departament.reduce((prev, currnet) => prev + currnet.salary, 0);
+  } else {
+    let sum = 0;
+    for(let subdep of Object.values(departament)) {
+      sum += sumSalaries(subdep)
+    }
+    return sum
+  }
+}
+
+console.log(sumSalaries(company));
+
+
+const factorial = (n) => {
+  if (n === 0) {
+    return 1
+  }
+
+  const iter = (counter, acc) => {
+    if(counter === 1) {
+      return acc
+    }
+    return iter(counter - 1, counter * acc)
+  };
+  return iter(n, 1)
 };
+
+console.log(factorial(5, 12));
