@@ -1122,11 +1122,96 @@
 // }
 // codewars
 // Very simple, given an integer or a floating-point number, find its opposite.
-function opposite(number) {
-    //your code here++
-    if(number >= 0 || number <= 0) {
-      return -number
-    }else {
-      return number
+// function opposite(number) {
+//     //your code here++
+//     if(number >= 0 || number <= 0) {
+//       return -number
+//     }else {
+//       return number
+//     }
+//   }
+
+// function opp(num) {
+//     console.log(-num)
+// }
+
+// opp(0)
+
+// function invert(array) {
+//     const arr = Object.entries( array);
+//     arr <= 0 || arr >= 0 ? -arr : arr;
+//     return arr
+//   }
+
+// // console.log(invert(232));
+// function findNeedle(haystack) {
+//   // your code here
+//   let ar = [];
+//   haystack.map((arr, index) => {
+//     if(arr === 'needle') return `found the needle at position ${index}`;
+//     return "found the needle at position 6"
+//   })
+//   ar.push(haystack);
+//   console.log(ar);
+//   return ar
+// }
+// findNeedle(['3', '123124234', undefined,  'world', 'hay', 2, '3', true, false])
+
+
+// const btn = document.querySelector('.click')
+// function printPage() {
+//   window.print()
+// }
+// btn.addEventListener('click', printPage)
+
+// let side1 = 5;
+// let side2 = 6;
+// let side3 = 7;
+
+// const s = (side1 + side2 + side3) / 2;
+// const area = Math.sqrt(s*((s - side1)*(s - side2) * (s - side3) ))
+// console.log(area);
+
+// function animateString() {
+//   let element = document.querySelector('#target');
+//   let textNode = element.childNodes;
+//   let text = textNode.data;
+// }
+
+// setInterval(function() {
+//   text = text[text.length - 1] + text.substring(0, text.length - 1);
+//   textNode.data = text;
+// }, 100)
+
+// function leapYear(year) {
+//   return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0)
+// }
+// console.log(leapYear(2016));
+
+
+// const copyClipboard = str => {
+//   const el = document.createElement('textarea');
+//   el.value = str;
+//   el.setAttribute('readonly', '');
+//   el.style.position = 'absolute';
+//   el.style.left = '-9999px';
+//   document.body.appendChild(el);
+//   const selected = document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false;
+//   el.select();
+//   document.execCommand('copy');
+//   document.body.removeChild(el);
+//   if(selected) {
+//     document.getSelection().removeAllRanges();
+//     document.getSelection().addRange(selected);
+//   }
+// }
+function countBy(x, n) {
+    var z = [];
+    for (i = 1; i <= n; i++) {
+        console.log(z);
+        z.push(x * i);
     }
-  }
+    return z;
+}
+
+countBy(3, 4)
