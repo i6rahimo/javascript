@@ -1205,13 +1205,102 @@
 //     document.getSelection().addRange(selected);
 //   }
 // }
-function countBy(x, n) {
-    var z = [];
-    for (i = 1; i <= n; i++) {
-        console.log(z);
-        z.push(x * i);
+// function countBy(x, n) {
+//     var z = [];
+//     for (i = 1; i <= n; i++) {
+//         console.log(z);
+//         z.push(x * i);
+//     }
+//     return z;
+// }
+
+// countBy(3, 4)
+
+// function bmi(weight, height) {
+//     let bmis = weight / Math.pow(height, 2);
+//     console.log(bmi)
+//     bmis <= 18.5 ?  'Underweight' : 'error';
+//   bmis <= 25.0 ?  'Normal' : false;
+//   bmis <= 30.0 ? 'Overweight' : false;
+//   bmis > 30 ? 'Obese' : false;
+  
+    
+//     return bmis;
+//   }
+
+//   console.log( bmi(2,34));
+
+
+// let promise = new Promise(function(resolve, reject) {
+//     setTimeout(()=> resolve('done'), 1000)
+// })
+// const prom = promise()
+// console.log(prom);
+
+// $(".box").live("click", function() {
+//     console.log('qwe');
+// })
+
+
+// let promise = new Promise(function(resolve, reject) {
+//     setTimeout(() => resolve('done', 1000))
+// })
+// .finally(() => console.log('Промис завершен'))
+// .then(result => console.log(result))
+
+
+// promise.then(
+//     result => console.log(result),
+//     error => console.log(error)
+// )
+
+
+// function loadScript(src, callback) {
+//     let script = document.createElement('script');
+//     script.src = src;
+
+//     script.onload = () => callback(null, script);
+//     script.onerror = () => callback(new Error(`Ошибка загрузки скрипта ${src}`));
+
+//     document.head.append(script);
+// }
+// loadScript()
+
+
+// const promise = new Promise(function (resolve, reject) {
+//     const data = resolve(data);
+// });
+
+// const errorPromise = new Promise(function(resolve, reject) {
+//     reject(new Error('error'))
+// 
+
+// const promise = fetch(`https://swapi.dev/api/films/${id}/`).then(function(movies) {
+//     console.log(movies);
+// })
+
+
+function getDivisorsCnt(n) {
+
+    for(let i = 1; i <= n; i++) {
+        
+        const division = n / i;
+        
+        console.log(division);
+
     }
-    return z;
 }
 
-countBy(3, 4)
+getDivisorsCnt(4)
+
+
+let counter = 0;
+
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', ()=> {
+    counter += 1;
+    const text = document.querySelector('#id')
+    text.innerHTML = `Кол-во лайков = ${counter}`
+    console.log('qwe');
+})
+
